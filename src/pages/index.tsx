@@ -1,52 +1,110 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Ranking from "./ranking";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import desafio from "./desafio";
+import Link from "next/link";
+type Props = {
+  ids: number[];
+};
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home({ ids }: Props) {
+  const [teamData, setTeamData] = useState<any[]>([]);
+  const [sortOrder, setSortOrder] = useState<string>("asc");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const ids = [
+        9035902, 19298673, 47629775, 47996695, 1331986, 1276535, 26328842,
+        1909960, 406869, 47829504, 1614368, 19653180, 13916753, 7969983,
+        1941336, 47663847, 47646361, 8631482, 1071737, 1229763, 47703776,
+      ];
+      const responses = await Promise.all(
+        ids.map((id) =>
+          axios.get(`https://api.cartola.globo.com/time/id/${id}`)
+        )
+      );
+      setTeamData(responses.map((res) => res.data));
+    };
+
+    fetchData();
+    console.log(teamData);
+  }, []);
+
+  const handleSortByPontosCampeonato = () => {
+    if (sortOrder === "asc") {
+      setTeamData(
+        [...teamData].sort((a, b) => a.pontos_campeonato - b.pontos_campeonato)
+      );
+      setSortOrder("desc");
+    } else {
+      setTeamData(
+        [...teamData].sort((a, b) => b.pontos_campeonato - a.pontos_campeonato)
+      );
+      setSortOrder("asc");
+    }
+  };
+
   return (
-    <Ranking ids={[]} />
-    // <main className="flex min-h-screen flex-col items-center justify-between p-24">
-    //   <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-    //     <table className="w-full rounded-lg overflow-hidden border-collapse">
-    //       <thead>
-    //         <tr className="border-b-2 border-gray-300 rounded-t-lg">
-    //           <th className="text-left py-3 px-4 uppercase font-semibold text-sm">
-    //             Time
-    //           </th>
-    //           <th className="text-left py-3 px-4 uppercase font-semibold text-sm">
-    //             Total
-    //           </th>
-    //           <th className="text-left py-3 px-4 uppercase font-semibold text-sm">
-    //             Posição
-    //           </th>
-    //         </tr>
-    //       </thead>
-    //       <tbody>
-    //         <tr className="border border-gray-300 rounded-full">
-    //           <td className="text-left py-3 px-4">Time 1</td>
-    //           <td className="text-left py-3 px-4">464</td>
-    //           <td className="text-left py-3 px-4">1</td>
-    //         </tr>
-    //         <tr className="border border-gray-300 rounded-full">
-    //           <td className="text-left py-3 px-4">Time 2</td>
-    //           <td className="text-left py-3 px-4">264</td>
-    //           <td className="text-left py-3 px-4">2</td>
-    //         </tr>
-    //         <tr className="border border-gray-300 rounded-full">
-    //           <td className="text-left py-3 px-4">Time 3</td>
-    //           <td className="text-left py-3 px-4">164</td>
-    //           <td className="text-left py-3 px-4">3</td>
-    //         </tr>
-    //         <tr className="border border-gray-300 rounded-full">
-    //           <td className="text-left py-3 px-4">Time 4</td>
-    //           <td className="text-left py-3 px-4">064</td>
-    //           <td className="text-left py-3 px-4">4</td>
-    //         </tr>
-    //       </tbody>
-    //     </table>
-    //   </div>
-    // </main>
+    <div className="min-h-screen flex flex-col justify-center items-center">
+      <table
+        id="team-scores"
+        className="w-3/5 mx-auto min-h-screen border-collapse"
+      >
+        <thead>
+          <tr>
+            <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
+              Time
+            </th>
+            <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
+              <div className="flex items-center justify-between">
+                Pontuação Geral
+                <select
+                  className="ml-2 p-1 bg-gray-900 rounded border cursor-pointer required:invalid"
+                  onChange={handleSortByPontosCampeonato}
+                  value={sortOrder}
+                >
+                  <option value="" disabled selected>
+                    Clique para Ordenar
+                  </option>
+                  <option value="asc">Ordenar: ↓ </option>
+                  <option value="desc">Ordenar: ↑ </option>
+                </select>
+              </div>
+            </th>
+            <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
+              Rodada Atual
+            </th>
+            <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
+              Patrimônio
+            </th>
+            <th>
+              {" "}
+              <Link href="/desafio">Ir para Desafios bolas de ouro →</Link>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {teamData.map((data, index) => (
+            <tr key={index}>
+              <td className="border px-4 py-2 text-center bg-gray-500 ">
+                {data.time.nome}
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-500 ">
+                {Number(data.pontos_campeonato).toFixed(2)}
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-500 ">
+                {Number(data.pontos).toFixed(2)}
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-500 ">
+                {data.patrimonio}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
