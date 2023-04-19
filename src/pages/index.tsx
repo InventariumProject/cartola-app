@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -25,8 +24,10 @@ export default function Home({ ids }: Props) {
           axios.get(`https://api.cartola.globo.com/time/id/${id}`)
         )
       );
+
       setTeamData(
         responses
+
           .map((res) => res.data)
           .sort((a, b) => b.pontos_campeonato - a.pontos_campeonato)
       );
