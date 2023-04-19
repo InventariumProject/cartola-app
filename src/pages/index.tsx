@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import desafio from "./desafio";
 import Link from "next/link";
 type Props = {
   ids: number[];
@@ -26,11 +25,14 @@ export default function Home({ ids }: Props) {
           axios.get(`https://api.cartola.globo.com/time/id/${id}`)
         )
       );
-      setTeamData(responses.map((res) => res.data));
+      setTeamData(
+        responses
+          .map((res) => res.data)
+          .sort((a, b) => b.pontos_campeonato - a.pontos_campeonato)
+      );
     };
 
     fetchData();
-    console.log(teamData);
   }, []);
 
   const handleSortByPontosCampeonato = () => {
@@ -61,17 +63,14 @@ export default function Home({ ids }: Props) {
             <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
               <div className="flex items-center justify-between">
                 Pontuação Geral
-                <select
+                {/* <select
                   className="ml-2 p-1 bg-gray-900 rounded border cursor-pointer required:invalid"
                   onChange={handleSortByPontosCampeonato}
                   value={sortOrder}
                 >
-                  <option value="" disabled selected>
-                    Clique para Ordenar
-                  </option>
-                  <option value="asc">Ordenar: ↓ </option>
                   <option value="desc">Ordenar: ↑ </option>
-                </select>
+                  <option value="asc">Ordenar: ↓ </option>
+                </select> */}
               </div>
             </th>
             <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
