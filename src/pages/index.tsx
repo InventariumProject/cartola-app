@@ -5,7 +5,19 @@ import Link from "next/link";
 type Props = {
   ids: number[];
 };
+type TeamData = {
+  time: {
+    nome: string;
+  };
+  pontos_campeonato: number;
+  pontos: number;
+  patrimonio: number;
+  rodada_atual: number;
+};
 
+type UpdatedTeamData = TeamData & {
+  diffToLeader: number;
+};
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ ids }: Props) {
@@ -34,17 +46,18 @@ export default function Home({ ids }: Props) {
     };
 
     fetchData();
-  }, []);
+  }, [ids]);
 
   useEffect(() => {
-    const updatedTeamData = teamData.map((team) => {
+    const updatedTeamData = teamData.map((team, i) => {
       const leaderScore = teamData[0].pontos_campeonato;
       const diffToLeader = (team.pontos_campeonato - leaderScore).toFixed(2);
       return { ...team, diffToLeader };
     });
 
     setTeamData(updatedTeamData);
-  }, [teamData]);
+  }, []);
+  // Inserir teamData no [] para extrair 1 vez e tirar print
 
   // const handleSortByPontosCampeonato = () => {
   //   if (sortOrder === "asc") {
