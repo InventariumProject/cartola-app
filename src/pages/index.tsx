@@ -26,32 +26,39 @@ export default function Home({ ids }: Props) {
         )
       );
 
-      const highestPontosCampeonato = teamData[0]?.pontos_campeonato || 0;
-      const updatedTeamData = teamData.map((team) => ({
-        ...team,
-        diffToLeader: Number(
-          team.pontos_campeonato - highestPontosCampeonato
-        ).toFixed(2),
-      }));
-      setTeamData(updatedTeamData);
+      setTeamData(
+        responses
+          .map((res) => res.data)
+          .sort((a, b) => b.pontos_campeonato - a.pontos_campeonato)
+      );
     };
 
     fetchData();
   }, []);
 
-  const handleSortByPontosCampeonato = () => {
-    if (sortOrder === "asc") {
-      setTeamData(
-        [...teamData].sort((a, b) => a.pontos_campeonato - b.pontos_campeonato)
-      );
-      setSortOrder("desc");
-    } else {
-      setTeamData(
-        [...teamData].sort((a, b) => b.pontos_campeonato - a.pontos_campeonato)
-      );
-      setSortOrder("asc");
-    }
-  };
+  useEffect(() => {
+    const updatedTeamData = teamData.map((team) => {
+      const leaderScore = teamData[0].pontos_campeonato;
+      const diffToLeader = (team.pontos_campeonato - leaderScore).toFixed(2);
+      return { ...team, diffToLeader };
+    });
+
+    setTeamData(updatedTeamData);
+  }, [teamData]);
+
+  // const handleSortByPontosCampeonato = () => {
+  //   if (sortOrder === "asc") {
+  //     setTeamData(
+  //       [...teamData].sort((a, b) => a.pontos_campeonato - b.pontos_campeonato)
+  //     );
+  //     setSortOrder("desc");
+  //   } else {
+  //     setTeamData(
+  //       [...teamData].sort((a, b) => b.pontos_campeonato - a.pontos_campeonato)
+  //     );
+  //     setSortOrder("asc");
+  //   }
+  // };
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center">
@@ -114,7 +121,7 @@ export default function Home({ ids }: Props) {
                 {Number(data.pontos_campeonato / data.rodada_atual).toFixed(2)}
               </td>
               <td className="border px-4 py-2 text-center bg-gray-500">
-                {data.diffToLeader}
+                {Number(data.diffToLeader)}
               </td>
             </tr>
           ))}

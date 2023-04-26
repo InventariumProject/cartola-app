@@ -15,7 +15,7 @@ export default function Match() {
             <td className="text-center border rounded-l-lg  py-4">
               UmPoucoDrogaUmPoucoSalada
             </td>
-            <td className="text-center px-4 py-4">1</td>
+            <td className="text-center px-4 py-4">2</td>
             <td className="text-center px-4 py-4">x</td>
             <td className="text-center px-4 py-4">0</td>
             <td className="text-center border rounded-l-lg px-4 py-4">
@@ -26,7 +26,7 @@ export default function Match() {
             <td className="text-center border rounded-l-lg px-4 py-4">
               HEITA BEBIM SC
             </td>
-            <td className="text-center">1</td>
+            <td className="text-center">2</td>
             <td className="text-center">x</td>
             <td className="text-center">0</td>
             <td className="text-center border rounded-l-lg px-4 py-4">
@@ -37,7 +37,7 @@ export default function Match() {
             <td className="text-center border rounded-l-lg px-4 py-4">
               HEITA BEBIM SC
             </td>
-            <td className="text-center">1</td>
+            <td className="text-center">2</td>
             <td className="text-center">x</td>
             <td className="text-center">0</td>
             <td className="text-center border rounded-l-lg px-4 py-4">
@@ -50,7 +50,7 @@ export default function Match() {
             </td>
             <td className="text-center">1</td>
             <td className="text-center">x</td>
-            <td className="text-center">0</td>
+            <td className="text-center">1</td>
             <td className="text-center border rounded-l-lg px-4 py-4">
               Chupaku de Goianinha
             </td>
@@ -59,7 +59,7 @@ export default function Match() {
             <td className="text-center border rounded-l-lg px-4 py-4">
               Hoje eu vou Garotear FC
             </td>
-            <td className="text-center">1</td>
+            <td className="text-center">2</td>
             <td className="text-center">x</td>
             <td className="text-center">0</td>
             <td className="text-center border rounded-l-lg px-4 py-4">
@@ -72,7 +72,7 @@ export default function Match() {
             </td>
             <td className="text-center">0</td>
             <td className="text-center">x</td>
-            <td className="text-center">0</td>
+            <td className="text-center">1</td>
             <td className="text-center border rounded-l-lg px-4 py-4">
               ABC Palestrino ®©
             </td>
