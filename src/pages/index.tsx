@@ -18,6 +18,7 @@ export default function Home({ ids }: Props) {
         9035902, 19298673, 47629775, 47996695, 1331986, 1276535, 26328842,
         1909960, 406869, 47829504, 1614368, 19653180, 13916753, 7969983,
         1941336, 47663847, 47646361, 8631482, 1071737, 1229763, 47703776,
+        1174817,
       ];
       const responses = await Promise.all(
         ids.map((id) =>
@@ -25,12 +26,14 @@ export default function Home({ ids }: Props) {
         )
       );
 
-      setTeamData(
-        responses
-
-          .map((res) => res.data)
-          .sort((a, b) => b.pontos_campeonato - a.pontos_campeonato)
-      );
+      const highestPontosCampeonato = teamData[0]?.pontos_campeonato || 0;
+      const updatedTeamData = teamData.map((team) => ({
+        ...team,
+        diffToLeader: Number(
+          team.pontos_campeonato - highestPontosCampeonato
+        ).toFixed(2),
+      }));
+      setTeamData(updatedTeamData);
     };
 
     fetchData();
@@ -80,6 +83,12 @@ export default function Home({ ids }: Props) {
             <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
               Patrimônio
             </th>
+            <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
+              Média
+            </th>
+            <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
+              Dif to lider
+            </th>
             <th>
               {" "}
               <Link href="/desafio">Ir para Desafios bolas de ouro →</Link>
@@ -100,6 +109,12 @@ export default function Home({ ids }: Props) {
               </td>
               <td className="border px-4 py-2 text-center bg-gray-500 ">
                 {data.patrimonio}
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-500">
+                {Number(data.pontos_campeonato / data.rodada_atual).toFixed(2)}
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-500">
+                {data.diffToLeader}
               </td>
             </tr>
           ))}
