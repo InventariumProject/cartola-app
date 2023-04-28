@@ -12,6 +12,10 @@ const nextConfig = {
             value: "https://cartolapp.vercel.app",
           },
           {
+            key: "Access-Control-Allow-Origin",
+            value: "https://cartola.globo.com",
+          },
+          {
             key: "Access-Control-Allow-Methods",
             value: "GET,OPTIONS,PATCH,DELETE,POST,PUT",
           },
