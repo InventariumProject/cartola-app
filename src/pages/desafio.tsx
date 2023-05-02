@@ -129,7 +129,7 @@ export default function Match() {
                   width={30}
                   height={30}
                 />
-                <span className="text-sm">Hoje eu vou Garotear FC</span>
+                <span className="text-xs">Hoje eu vou Garotear FC</span>
               </div>
             </td>
             <td className="text-center p-4">2</td>
