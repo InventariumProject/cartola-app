@@ -1,6 +1,15 @@
+import Link from "next/link";
+
 export default function Awards() {
   return (
-    <div className="min-h-screen">
+    <div className="flex flex-col items-center min-w-fit m-2 p-2 dark:bg-black">
+      <Link className="text-center ml-10 p-4" href="/desafio">
+        ← Voltar para desafios
+      </Link>
+      <h1 className="text-2xl font-bold mb-8 text-center">
+        Tabela de Valores das Premiações
+      </h1>
+
       <table className="mx-auto min-h-screen border-collapse">
         <thead>
           <tr>

@@ -10,6 +10,9 @@ export default function Match() {
       {/* <Link className="text-center ml-10 py-4" href="/">
         ← Voltar para ranking
       </Link> */}
+      <Link className="text-center ml-10 py-4" href="/premiacao">
+        Ver premiações →
+      </Link>
       <table className="w-fit mt-6 flex items-center">
         <tbody>
           <tr className="">
