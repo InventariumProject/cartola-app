@@ -56,7 +56,7 @@ export default function Home({ ids }: Props) {
     });
 
     setTeamData(updatedTeamData);
-  }, []);
+  }, [teamData]);
   // Inserir teamData no [] para extrair 1 vez e tirar print
 
   // const handleSortByPontosCampeonato = () => {
@@ -133,9 +133,9 @@ export default function Home({ ids }: Props) {
               <td className="border px-4 py-2 text-center bg-gray-500">
                 {Number(data.pontos_campeonato / data.rodada_atual).toFixed(2)}
               </td>
-              {/* <td className="border px-4 py-2 text-center bg-gray-500">
+              <td className="border px-4 py-2 text-center bg-gray-500">
                 {Number(data.diffToLeader)}
-              </td> */}
+              </td>
             </tr>
           ))}
         </tbody>
