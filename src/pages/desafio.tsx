@@ -1,80 +1,177 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Match() {
   return (
-    <div className="flex flex-col items-center min-w-fit p-4">
-      <h1 className="text-2xl font-bold ml-10 mb-12 text-center	">
+    <div className="flex flex-col items-center min-w-fit m-2 p-2 dark:bg-black">
+      <h1 className="text-2xl font-bold mb-8 text-center	">
         Desafios Bolas de ouro
       </h1>
       {/* <Link className="text-center ml-10 py-4" href="/">
         ← Voltar para ranking
       </Link> */}
-      <table className="w-3/4 mt-12">
+      <table className="w-fit mt-6 flex items-center">
         <tbody>
-          <tr>
-            <td className="text-center border rounded-l-lg  py-4">
-              UmPoucoDrogaUmPoucoSalada
-            </td>
-            <td className="text-center px-4 py-4">2</td>
-            <td className="text-center px-4 py-4">x</td>
-            <td className="text-center px-4 py-4">0</td>
-            <td className="text-center border rounded-l-lg px-4 py-4">
-              Tenha Calma Moreno
-            </td>
-          </tr>
-          <tr>
-            <td className="text-center border rounded-l-lg px-4 py-4">
-              HEITA BEBIM SC
+          <tr className="">
+            <td className="text-center border-b-2 rounded-l-lg p-1">
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={"./images/droga.svg"}
+                  alt="escudo"
+                  width={30}
+                  height={30}
+                />
+                <span className="text-xs">UmPouco Droga UmPouco Salada</span>
+              </div>
             </td>
             <td className="text-center">2</td>
             <td className="text-center">x</td>
-            <td className="text-center">0</td>
-            <td className="text-center border rounded-l-lg px-4 py-4">
-              Seringas F.C
-            </td>
-          </tr>
-          <tr>
-            <td className="text-center border rounded-l-lg px-4 py-4">
-              HEITA BEBIM SC
-            </td>
-            <td className="text-center">2</td>
-            <td className="text-center">x</td>
-            <td className="text-center">0</td>
-            <td className="text-center border rounded-l-lg px-4 py-4">
-              Os sujismundos
-            </td>
-          </tr>
-          <tr>
-            <td className="text-center border rounded-l-lg px-4 py-4">
-              RaffeikeFC
-            </td>
             <td className="text-center">1</td>
-            <td className="text-center">x</td>
-            <td className="text-center">1</td>
-            <td className="text-center border rounded-l-lg px-4 py-4">
-              Chupaku de Goianinha
+            <td className="border-b-2 rounded-l-lg p-2">
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={"./images/daniel.svg"}
+                  alt="escudo"
+                  width={30}
+                  height={30}
+                />
+                <span className="text-sm">Tenha Calma Moreno</span>
+              </div>
+            </td>
+          </tr>
+          <tr className="">
+            <td className="text-center border-b-2 rounded-l-lg p-1">
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={"./images/herta.svg"}
+                  alt="escudo"
+                  width={30}
+                  height={30}
+                />
+                <span className="text-xs">HEITA BEBIM SC</span>
+              </div>
+            </td>
+            <td className="text-center p-4">2</td>
+            <td className="text-center p-4">x</td>
+            <td className="text-center p-4">1</td>
+            <td className="text-center border-b-2 rounded-l-lg p-2">
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={"./images/seringas.svg"}
+                  alt="escudo"
+                  width={30}
+                  height={30}
+                />
+                <span className="text-sm">Seringas F.C</span>
+              </div>
             </td>
           </tr>
           <tr>
-            <td className="text-center border rounded-l-lg px-4 py-4">
-              Hoje eu vou Garotear FC
+            <td className="text-center border-b-2 rounded-l-lg p-1">
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={"./images/herta.svg"}
+                  alt="escudo"
+                  width={30}
+                  height={30}
+                />
+                <span className="text-xs">HEITA BEBIM SC</span>
+              </div>
             </td>
-            <td className="text-center">2</td>
-            <td className="text-center">x</td>
-            <td className="text-center">0</td>
-            <td className="text-center border rounded-l-lg px-4 py-4">
-              Tenha Calma Moreno
+            <td className="text-center p-4">2</td>
+            <td className="text-center p-4">x</td>
+            <td className="text-center p-4">1</td>
+            <td className="text-center border-b-2 rounded-l-lg p-2">
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={"./images/sujismundo.svg"}
+                  alt="escudo"
+                  width={30}
+                  height={30}
+                />
+                <span className="text-sm">Os sujismundos</span>
+              </div>
             </td>
           </tr>
           <tr>
-            <td className="text-center border rounded-l-lg px-4 py-4">
-              BXUCRO
+            <td className="text-center border-b-2 rounded-l-lg p-1">
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={"./images/raffeike.svg"}
+                  alt="escudo2"
+                  width={30}
+                  height={30}
+                />
+                <span className="text-sm">RaffeikeFC</span>
+              </div>
             </td>
-            <td className="text-center">0</td>
-            <td className="text-center">x</td>
-            <td className="text-center">1</td>
-            <td className="text-center border rounded-l-lg px-4 py-4">
-              ABC Palestrino ®©
+            <td className="text-center p-4">2</td>
+            <td className="text-center p-4">x</td>
+            <td className="text-center p-4">1</td>
+            <td className="text-center border-b-2 rounded-l-lg p-2">
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={"./images/moraes2.svg"}
+                  alt="escudo"
+                  width={30}
+                  height={30}
+                />
+                <span className="text-sm">Chupaku de Goianinha</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td className="text-center border-b-2 rounded-l-lg p-1">
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={"./images/garotear.svg"}
+                  alt="escudo"
+                  width={30}
+                  height={30}
+                />
+                <span className="text-sm">Hoje eu vou Garotear FC</span>
+              </div>
+            </td>
+            <td className="text-center p-4">2</td>
+            <td className="text-center p-4">x</td>
+            <td className="text-center p-4">1</td>
+            <td className="text-center border-b-2 rounded-l-lg p-2">
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={"./images/daniel.svg"}
+                  alt="escudo"
+                  width={30}
+                  height={30}
+                />
+                <span className="text-sm">Tenha Calma Moreno</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td className="text-center border-b-2 rounded-l-lg p-1">
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={"./images/bxucro.svg"}
+                  alt="escudo"
+                  width={30}
+                  height={30}
+                />
+                <span className="text-xs">BXUCRO</span>
+              </div>
+            </td>
+            <td className="text-center p-4">1</td>
+            <td className="text-center p-4">x</td>
+            <td className="text-center p-4">1</td>
+            <td className="text-center border-b-2 rounded-l-lg p-2">
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={"./images/palestrino.svg"}
+                  alt="escudo"
+                  width={30}
+                  height={30}
+                />
+                <span className="text-sm">Palestrino ®©</span>
+              </div>
             </td>
           </tr>
         </tbody>

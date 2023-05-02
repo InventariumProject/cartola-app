@@ -1,0 +1,21 @@
+<svg width="500px" height="525px" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <clipPath id="formato">
+        <path d="M250.075,498.61c0,0,36.319-82.74,194.845-141.325V-1.145H261.845H238.15H55.08v358.43 C213.62,415.87,250.075,498.61,250.075,498.61L250.075,498.61L250.075,498.61z"/>
+      </clipPath>
+    </defs>
+
+    <g id="fundo" fill="#ff241d" x="0">
+      <path d="M250.075,498.61c0,0,36.319-82.74,194.845-141.325V-1.145H261.845H238.15H55.08v358.43 C213.62,415.87,250.075,498.61,250.075,498.61L250.075,498.61L250.075,498.61z"/>
+    </g>
+
+    <g id="estampa1" fill="#ffffff" x="0" clip-path="url(#formato)"><g><rect x="125" width="50" height="100%"/><rect x="225" width="50" height="100%"/><rect x="325" width="50" height="100%"/></g><rect id="estampa2" width="500" height="100" fill="#000000"/></g>
+
+    <g id="borda" fill="none" stroke="#000000" stroke-width="10" x="0">
+      <path d="M250.075,498.61c0,0,36.319-82.74,194.845-141.325V-1.145H261.845H238.15H55.08v358.43 C213.62,415.87,250.075,498.61,250.075,498.61L250.075,498.61L250.075,498.61z"/>
+    </g>
+
+    
+<g id="adorno"></g>
+
+</svg>

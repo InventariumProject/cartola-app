@@ -1,0 +1,21 @@
+<svg width="500px" height="525px" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <clipPath id="formato">
+        <circle cx="250.026" cy="249.975" r="249.475"/>
+      </clipPath>
+    </defs>
+
+    <g id="fundo" fill="#063780" x="0">
+      <circle cx="250.026" cy="249.975" r="249.475"/>
+    </g>
+
+    <g id="estampa1" fill="#063780" x="0" clip-path="url(#formato)"><g><rect x="125" width="50" height="100%"/><rect x="225" width="50" height="100%"/><rect x="325" width="50" height="100%"/></g><rect id="estampa2" width="500" height="100" fill="#ffffff"/></g>
+
+    <g id="borda" fill="none" stroke="#00b9ff" stroke-width="10" x="0">
+      <circle cx="250.026" cy="249.975" r="249.475"/>
+    </g>
+
+    
+<g id="adorno" transform="scale(2) translate(64, 65)" data-nome="bandeira branca"> <rect x="31.4297" y="12.4824" width="21.9911" height="8.0061" transform="rotate(4.82182 31.4297 12.4824)" fill="white"/> <rect x="30.5327" y="23.1199" width="21.9911" height="8.0061" transform="rotate(4.82182 30.5327 23.1199)" fill="white"/> <rect x="29.6353" y="33.7572" width="21.9911" height="8.0061" transform="rotate(4.82182 29.6353 33.7572)" fill="white"/> <rect x="28.7378" y="44.3927" width="21.9911" height="8.0061" transform="rotate(4.82182 28.7378 44.3927)" fill="white"/> <rect x="27.8413" y="55.0302" width="21.9911" height="8.0061" transform="rotate(4.82182 27.8413 55.0302)" fill="white"/> <rect x="26.9434" y="65.6676" width="21.9911" height="8.0061" transform="rotate(4.82182 26.9434 65.6676)" fill="white"/> <rect x="55.5757" y="11" width="50.9654" height="8.0061" transform="rotate(4.82182 55.5757 11)" fill="white"/> <rect x="54.6797" y="21.6375" width="50.9654" height="8.0061" transform="rotate(4.82182 54.6797 21.6375)" fill="white"/> <rect x="53.7817" y="32.2748" width="50.9654" height="8.0061" transform="rotate(4.82182 53.7817 32.2748)" fill="white"/> <rect x="52.8843" y="42.9103" width="50.9654" height="8.0061" transform="rotate(4.82182 52.8843 42.9103)" fill="white"/> <rect x="51.9878" y="53.5477" width="50.9654" height="8.0061" transform="rotate(4.82182 51.9878 53.5477)" fill="white"/> <rect x="51.0903" y="64.1851" width="50.9654" height="8.0061" transform="rotate(4.82182 51.0903 64.1851)" fill="white"/> <rect x="22.3003" y="11.7142" width="9.16386" height="98.7419" transform="rotate(4.82182 22.3003 11.7142)" fill="white"/> </g>
+
+</svg>
