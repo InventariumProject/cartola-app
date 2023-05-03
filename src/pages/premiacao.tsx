@@ -13,20 +13,20 @@ export default function Awards() {
       <table className="mx-auto min-h-screen border-collapse">
         <thead>
           <tr>
-            <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
+            <th className="border px-4 py-2 text-center text-white bg-gray-900 font-bold">
               Posição
             </th>
-            <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
+            <th className="border px-4 py-2 text-center text-white bg-gray-900 font-bold">
               Valor
             </th>
             <th>{}</th>
-            <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
+            <th className="border px-4 py-2 text-center text-white bg-gray-900 font-bold">
               Campeão 1o turno
             </th>
-            <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
+            <th className="border px-4 py-2 text-center text-white bg-gray-900 font-bold">
               Campeão 2o turno
             </th>
-            <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
+            <th className="border px-4 py-2 text-center text-white bg-gray-900 font-bold">
               Maior pontuação em rodada
             </th>
           </tr>
