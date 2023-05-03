@@ -114,7 +114,7 @@ export default function Match() {
             <td className="text-center border-b-2 rounded-l-lg p-2">
               <div className="flex items-center space-x-2">
                 <Image
-                  src={"./images/moraes2.svg"}
+                  src={"./images/xandao.svg"}
                   alt="escudo"
                   width={30}
                   height={30}
