@@ -30,7 +30,7 @@ export default function Match() {
             <td className="text-center">2</td>
             <td className="text-center">x</td>
             <td className="text-center">1</td>
-            <td className="border-b-2 rounded-l-lg p-2">
+            <td className="text-center border-b-2 rounded-l-lg p-2">
               <div className="flex items-center space-x-2">
                 <Image
                   src={"./images/daniel.svg"}
@@ -98,7 +98,7 @@ export default function Match() {
           </tr>
           <tr>
             <td className="text-center border-b-2 rounded-l-lg p-1">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-1">
                 <Image
                   src={"./images/raffeike.svg"}
                   alt="escudo2"
