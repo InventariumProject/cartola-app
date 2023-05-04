@@ -9,17 +9,9 @@ export default function Awards() {
       <h1 className="text-2xl font-bold mb-8 text-center">
         Tabela de Valores das Premiações
       </h1>
-
-      <table className="mx-auto min-h-screen border-collapse">
+      <table className="mx-auto border-collapse">
         <thead>
           <tr>
-            <th className="border px-4 py-2 text-center text-white bg-gray-900 font-bold">
-              Posição
-            </th>
-            <th className="border px-4 py-2 text-center text-white bg-gray-900 font-bold">
-              Valor
-            </th>
-            <th>{}</th>
             <th className="border px-4 py-2 text-center text-white bg-gray-900 font-bold">
               Campeão 1o turno
             </th>
@@ -33,13 +25,6 @@ export default function Awards() {
         </thead>
         <tbody>
           <tr>
-            <td className="border px-4 py-2 text-center bg-yellow-500 ">
-              1º lugar Geral
-            </td>
-            <td className="border px-4 py-2 text-center bg-yellow-500 ">
-              R$ 325,00
-            </td>
-            <td className="px-4 py-2">{}</td>
             <td className="border px-4 py-2 text-center bg-yellow-600 ">
               R$ 50,00
             </td>
@@ -50,6 +35,27 @@ export default function Awards() {
               R$ 80,00
             </td>
           </tr>
+        </tbody>
+      </table>
+      <br />
+      <table className="mx-auto border-collapse">
+        <thead>
+          <tr>
+            <th className="border px-4 py-2 text-center text-white bg-gray-900 font-bold">
+              Posição
+            </th>
+            <th className="border px-4 py-2 text-center text-white bg-gray-900 font-bold">
+              Valor
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <td className="border px-4 py-2 text-center bg-yellow-500 ">
+            1º lugar Geral
+          </td>
+          <td className="border px-4 py-2 text-center bg-yellow-500 ">
+            R$ 325,00
+          </td>
           <tr>
             <td className="border px-4 py-2 text-center bg-gray-600 ">
               2º lugar Geral
@@ -66,118 +72,166 @@ export default function Awards() {
               R$ 120,00
             </td>
           </tr>
+        </tbody>
+      </table>
+      <br />
+      <div className="flex">
+        <table className="mx-2 border-collapse">
+          <thead>
+            <tr>
+              <th className="border px-4 py-2 text-center text-white bg-gray-900 font-bold">
+                Posição
+              </th>
+              <th className="border px-4 py-2 text-center text-white bg-gray-900 font-bold">
+                Valor
+              </th>
+              <th className=""> </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                4º lugar Geral
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                R$ 70,00
+              </td>
+            </tr>
+            <tr>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                5º lugar Geral
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                R$ 40,00
+              </td>
+            </tr>
+            <tr>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                6º lugar Geral
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                R$ 30,00
+              </td>
+            </tr>
+            <tr>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                7º lugar Geral
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                R$ 20,00
+              </td>
+            </tr>
+            <tr>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                8º lugar Geral
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                R$ 14,00
+              </td>
+            </tr>
+            <tr>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                9º lugar Geral
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                R$ 13,00
+              </td>
+            </tr>
+            <tr>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                10º lugar Geral
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                R$ 12,00
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table className="mx-2 border-collapse">
+          <thead>
+            <tr>
+              <th className="border px-4 py-2 text-center text-white bg-gray-900 font-bold">
+                Posição
+              </th>
+              <th className="border px-4 py-2 text-center text-white bg-gray-900 font-bold">
+                Valor
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                11º lugar Geral
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                R$ 11,00
+              </td>
+            </tr>
+            <tr>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                12º lugar Geral
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                R$ 10,00
+              </td>
+            </tr>
+            <tr>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                13º lugar Geral
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                R$ 9,00
+              </td>
+            </tr>
+            <tr>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                14º lugar Geral
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                R$ 8,00
+              </td>
+            </tr>
+            <tr>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                15º lugar Geral
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                R$ 7,00
+              </td>
+            </tr>
+            <tr>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                16º lugar Geral
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                R$ 6,00
+              </td>
+            </tr>
+            <tr>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                17º lugar Geral
+              </td>
+              <td className="border px-4 py-2 text-center bg-gray-400 ">
+                R$ 5,00
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br />
+      <table>
+        <thead>
           <tr>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              4º lugar Geral
-            </td>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              R$ 70,00
-            </td>
+            <th className="border px-4 py-2 text-center text-white bg-gray-900 font-bold">
+              Posição
+            </th>
+            <th className="border px-4 py-2 text-center text-white bg-gray-900 font-bold">
+              Valor
+            </th>
           </tr>
-          <tr>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              5º lugar Geral
-            </td>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              R$ 40,00
-            </td>
-          </tr>
-          <tr>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              6º lugar Geral
-            </td>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              R$ 30,00
-            </td>
-          </tr>
-          <tr>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              7º lugar Geral
-            </td>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              R$ 20,00
-            </td>
-          </tr>
-          <tr>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              8º lugar Geral
-            </td>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              R$ 14,00
-            </td>
-          </tr>
-          <tr>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              9º lugar Geral
-            </td>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              R$ 13,00
-            </td>
-          </tr>
-          <tr>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              10º lugar Geral
-            </td>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              R$ 12,00
-            </td>
-          </tr>
-          <tr>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              11º lugar Geral
-            </td>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              R$ 11,00
-            </td>
-          </tr>
-          <tr>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              12º lugar Geral
-            </td>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              R$ 10,00
-            </td>
-          </tr>
-          <tr>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              13º lugar Geral
-            </td>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              R$ 9,00
-            </td>
-          </tr>
-          <tr>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              14º lugar Geral
-            </td>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              R$ 8,00
-            </td>
-          </tr>
-          <tr>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              15º lugar Geral
-            </td>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              R$ 7,00
-            </td>
-          </tr>
-          <tr>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              16º lugar Geral
-            </td>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              R$ 6,00
-            </td>
-          </tr>
-          <tr>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              17º lugar Geral
-            </td>
-            <td className="border px-4 py-2 text-center bg-gray-400 ">
-              R$ 5,00
-            </td>
-          </tr>
+        </thead>
+        <tbody>
           <tr>
             <td className="border px-4 py-2 text-center bg-red-500 ">
               18º lugar Geral
