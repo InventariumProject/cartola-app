@@ -27,7 +27,7 @@ export default function Match() {
                 <span className="text-xs">UmPouco Droga UmPouco Salada</span>
               </div>
             </td>
-            <td className="text-center">2</td>
+            <td className="text-center">3</td>
             <td className="text-center">x</td>
             <td className="text-center">1</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
@@ -54,7 +54,7 @@ export default function Match() {
                 <span className="text-xs">HEITA BEBIM SC</span>
               </div>
             </td>
-            <td className="text-center p-4">2</td>
+            <td className="text-center p-4">3</td>
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">1</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
@@ -81,7 +81,7 @@ export default function Match() {
                 <span className="text-xs">HEITA BEBIM SC</span>
               </div>
             </td>
-            <td className="text-center p-4">2</td>
+            <td className="text-center p-4">3</td>
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">1</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
@@ -108,7 +108,7 @@ export default function Match() {
                 <span className="text-sm">RaffeikeFC</span>
               </div>
             </td>
-            <td className="text-center p-4">2</td>
+            <td className="text-center p-4">3</td>
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">1</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
@@ -135,7 +135,7 @@ export default function Match() {
                 <span className="text-xs">Hoje eu vou Garotear FC</span>
               </div>
             </td>
-            <td className="text-center p-4">2</td>
+            <td className="text-center p-4">3</td>
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">1</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
