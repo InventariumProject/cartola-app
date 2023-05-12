@@ -9,11 +9,11 @@ const nextConfig = {
           { key: "Access-Control-Allow-Credentials", value: "true" },
           {
             key: "Access-Control-Allow-Origin",
-            value: "https://cartolapp-6rlz9do8w-paulohfreire.vercel.app",
+            value: "https://cartolapp.vercel.app",
           },
           {
             key: "Access-Control-Allow-Origin",
-            value: "https://api.cartola.globo.com",
+            value: "https://cartola.globo.com",
           },
           {
             key: "Access-Control-Allow-Methods",
