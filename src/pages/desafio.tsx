@@ -27,7 +27,7 @@ export default function Match() {
                 <span className="text-xs">UmPouco Droga UmPouco Salada</span>
               </div>
             </td>
-            <td className="text-center">3</td>
+            <td className="text-center">4</td>
             <td className="text-center">x</td>
             <td className="text-center">1</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
@@ -54,7 +54,7 @@ export default function Match() {
                 <span className="text-xs">HEITA BEBIM SC</span>
               </div>
             </td>
-            <td className="text-center p-4">3</td>
+            <td className="text-center p-4">4</td>
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">1</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
@@ -81,7 +81,7 @@ export default function Match() {
                 <span className="text-xs">HEITA BEBIM SC</span>
               </div>
             </td>
-            <td className="text-center p-4">3</td>
+            <td className="text-center p-4">4</td>
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">1</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
@@ -108,7 +108,7 @@ export default function Match() {
                 <span className="text-sm">RaffeikeFC</span>
               </div>
             </td>
-            <td className="text-center p-4">3</td>
+            <td className="text-center p-4">4</td>
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">1</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
@@ -135,7 +135,7 @@ export default function Match() {
                 <span className="text-xs">Hoje eu vou Garotear FC</span>
               </div>
             </td>
-            <td className="text-center p-4">3</td>
+            <td className="text-center p-4">4</td>
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">1</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
@@ -159,12 +159,12 @@ export default function Match() {
                   width={30}
                   height={30}
                 />
-                <span className="text-xs">BXUCRO</span>
+                <span className="text-xs">BXUCRO (1) </span>
               </div>
             </td>
             <td className="text-center p-4">1</td>
             <td className="text-center p-4">x</td>
-            <td className="text-center p-4">1</td>
+            <td className="text-center p-4">3</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
               <div className="flex items-center space-x-2">
                 <Image
@@ -174,6 +174,33 @@ export default function Match() {
                   height={30}
                 />
                 <span className="text-sm">Palestrino ®©</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td className="text-center border-b-2 rounded-l-lg p-1">
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={"./images/mito.svg"}
+                  alt="escudo"
+                  width={30}
+                  height={30}
+                />
+                <span className="text-sm">A volta do Mito</span>
+              </div>
+            </td>
+            <td className="text-center p-4">2</td>
+            <td className="text-center p-4">x</td>
+            <td className="text-center p-4">0</td>
+            <td className="text-center border-b-2 rounded-l-lg p-2">
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={"./images/xandao.svg"}
+                  alt="escudo"
+                  width={30}
+                  height={30}
+                />
+                <span className="text-sm">Chupaku de Goianinha</span>
               </div>
             </td>
           </tr>
