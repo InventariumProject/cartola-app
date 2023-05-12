@@ -159,7 +159,7 @@ export default function Match() {
                   width={30}
                   height={30}
                 />
-                <span className="text-xs">BXUCRO (1) </span>
+                <span className="text-xs">BXUCRO </span>
               </div>
             </td>
             <td className="text-center p-4">1</td>
