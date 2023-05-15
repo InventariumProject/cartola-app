@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+
 type Props = {
   ids: number[];
 };
