@@ -57,7 +57,7 @@ export default function Home({ ids }: Props) {
     });
 
     setTeamData(updatedTeamData);
-  }, [teamData]);
+  }, []);
   // Inserir teamData no [] para extrair 1 vez e tirar print
 
   // const handleSortByPontosCampeonato = () => {
