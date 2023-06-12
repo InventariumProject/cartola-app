@@ -29,7 +29,7 @@ export default function Match() {
             </td>
             <td className="text-center">6</td>
             <td className="text-center">x</td>
-            <td className="text-center">3</td>
+            <td className="text-center">4</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
               <div className="flex items-center space-x-2">
                 <Image
@@ -56,7 +56,7 @@ export default function Match() {
             </td>
             <td className="text-center p-4">5</td>
             <td className="text-center p-4">x</td>
-            <td className="text-center p-4">4</td>
+            <td className="text-center p-4">5</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
               <div className="flex items-center space-x-2">
                 <Image
@@ -83,7 +83,7 @@ export default function Match() {
             </td>
             <td className="text-center p-4">5</td>
             <td className="text-center p-4">x</td>
-            <td className="text-center p-4">4</td>
+            <td className="text-center p-4">5</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
               <div className="flex items-center space-x-2">
                 <Image
@@ -108,7 +108,7 @@ export default function Match() {
                 <span className="text-sm">RaffeikeFC</span>
               </div>
             </td>
-            <td className="text-center p-4">6</td>
+            <td className="text-center p-4">7</td>
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">3</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
@@ -137,7 +137,7 @@ export default function Match() {
             </td>
             <td className="text-center p-4">6</td>
             <td className="text-center p-4">x</td>
-            <td className="text-center p-4">3</td>
+            <td className="text-center p-4">4</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
               <div className="flex items-center space-x-2">
                 <Image
@@ -164,7 +164,7 @@ export default function Match() {
             </td>
             <td className="text-center p-4">3</td>
             <td className="text-center p-4">x</td>
-            <td className="text-center p-4">5</td>
+            <td className="text-center p-4">6</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
               <div className="flex items-center space-x-2">
                 <Image
@@ -189,7 +189,7 @@ export default function Match() {
                 <span className="text-sm">A volta do Mito</span>
               </div>
             </td>
-            <td className="text-center p-4">4</td>
+            <td className="text-center p-4">5</td>
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">2</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
