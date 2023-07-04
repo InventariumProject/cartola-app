@@ -57,7 +57,7 @@ export default function Home({ ids }: Props) {
     });
 
     setTeamData(updatedTeamData);
-  }, []);
+  }, [teamData]);
   // Inserir teamData no [] para extrair 1 vez e tirar print
 
   // const handleSortByPontosCampeonato = () => {
@@ -110,6 +110,10 @@ export default function Home({ ids }: Props) {
             <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
               Dif to lider
             </th>
+            <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
+              Maior Pontuação em rodada
+            </th>
+
             <th>
               {" "}
               <Link href="/desafio">Ir para Desafios bolas de ouro →</Link>
