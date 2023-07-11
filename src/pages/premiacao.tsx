@@ -32,7 +32,7 @@ export default function Awards() {
               R$ 50,00
             </td>
             <td className="border px-4 py-2 text-center bg-yellow-800">
-              R$ 80,00
+              R$ 80,00 - Pintão 126.80 rodada 13
             </td>
           </tr>
         </tbody>
