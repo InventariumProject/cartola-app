@@ -2,6 +2,8 @@ import { Inter } from "next/font/google";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import NextCors from "nextjs-cors";
+import { NextApiRequest, NextApiResponse } from "next/types";
 
 type Props = {
   ids: number[];
@@ -33,6 +35,14 @@ export default function Home({ ids }: Props) {
         1941336, 47663847, 47646361, 8631482, 1071737, 1229763, 47703776,
         1174817,
       ];
+
+      async function handler(req: NextApiRequest, res: NextApiResponse) {
+        await NextCors(req, res, {
+          methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
+          origin: "*",
+          optionsSuccessStatus: 200,
+        });
+      }
       const responses = await Promise.all(
         ids.map((id) =>
           axios.get(`https://api.cartola.globo.com/time/id/${id}`)
