@@ -2,8 +2,6 @@ import { Inter } from "next/font/google";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import NextCors from "nextjs-cors";
-import { NextApiRequest, NextApiResponse } from "next/types";
 
 type Props = {
   ids: number[];
@@ -36,17 +34,8 @@ export default function Home({ ids }: Props) {
         1174817,
       ];
 
-      async function handler(req: NextApiRequest, res: NextApiResponse) {
-        await NextCors(req, res, {
-          methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
-          origin: "*",
-          optionsSuccessStatus: 200,
-        });
-      }
       const responses = await Promise.all(
-        ids.map((id) =>
-          axios.get(`https://api.cartola.globo.com/time/id/${id}`)
-        )
+        ids.map((id) => axios.get(`/api/${id}`))
       );
 
       setTeamData(
@@ -67,7 +56,7 @@ export default function Home({ ids }: Props) {
     });
 
     setTeamData(updatedTeamData);
-  }, []);
+  }, [teamData]);
   // Inserir teamData no [] para extrair 1 vez e tirar print
 
   // const handleSortByPontosCampeonato = () => {
