@@ -59,19 +59,29 @@ export default function Home({ ids }: Props) {
     }
   }, [teamData, diffToLeaderData]);
 
-  const handleSortByPontosCampeonato = () => {
-    if (sortOrder === "asc") {
-      setTeamData(
-        [...teamData].sort((a, b) => a.pontos_campeonato - b.pontos_campeonato)
-      );
-      setSortOrder("desc");
-    } else {
-      setTeamData(
-        [...teamData].sort((a, b) => b.pontos_campeonato - a.pontos_campeonato)
-      );
-      setSortOrder("asc");
-    }
-  };
+  // const handleSortByPontosCampeonato = () => {
+  //   if (sortOrder === "asc") {
+  //     setTeamData(
+  //       [...teamData].sort((a, b) => a.pontos_campeonato - b.pontos_campeonato)
+  //     );
+  //     setSortOrder("desc");
+  //   } else {
+  //     setTeamData(
+  //       [...teamData].sort((a, b) => b.pontos_campeonato - a.pontos_campeonato)
+  //     );
+  //     setSortOrder("asc");
+  //   }
+  // };
+
+  // const handleSortByPatrimonio = () => {
+  //   if (sortOrder === "asc") {
+  //     setTeamData([...teamData].sort((a, b) => a.patrimonio - b.patrimonio));
+  //     setSortOrder("desc");
+  //   } else {
+  //     setTeamData([...teamData].sort((a, b) => b.patrimonio - a.patrimonio));
+  //     setSortOrder("asc");
+  //   }
+  // };
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center">
@@ -82,26 +92,39 @@ export default function Home({ ids }: Props) {
         <thead>
           <tr>
             <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
+              Classificação
+            </th>
+            <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
               Time
             </th>
             <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
               <div className="flex items-center justify-between">
                 Pontuação Geral
-                <select
-                  className="ml-2 p-1 bg-gray-900 rounded border cursor-pointer required:invalid"
+                {/* <select
+                  className="ml-1 p-1 bg-gray-900 cursor-pointer required:invalid"
                   onChange={handleSortByPontosCampeonato}
                   value={sortOrder}
                 >
-                  <option value="desc">Ordenar: ↑ </option>
-                  <option value="asc">Ordenar: ↓ </option>
-                </select>
+                  <option value="desc">↑</option>
+                  <option value="asc">↓</option>
+                </select> */}
               </div>
             </th>
             <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
               Última Rodada
             </th>
             <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
-              Patrimônio
+              <div className="flex items-center justify-between">
+                Patrimônio
+                {/* <select
+                  className="ml-1 p-1 bg-gray-900 rounded cursor-pointer required:invalid"
+                  onChange={handleSortByPatrimonio}
+                  value={sortOrder}
+                >
+                  <option value="desc">↑</option>
+                  <option value="asc">↓</option>
+                </select> */}
+              </div>
             </th>
             <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
               Média
@@ -119,6 +142,9 @@ export default function Home({ ids }: Props) {
         <tbody>
           {teamData.map((data, index) => (
             <tr key={index}>
+              <td className="border px-4 py-2 text-center bg-gray-500">
+                {index + 1}
+              </td>
               <td className="border px-4 py-2 text-center bg-gray-500 ">
                 {data.time.nome}
               </td>
