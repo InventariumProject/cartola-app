@@ -33,10 +33,9 @@ export default function Home({ ids }: Props) {
         1941336, 47663847, 47646361, 8631482, 1071737, 1229763, 47703776,
         1174817,
       ];
+
       const responses = await Promise.all(
-        ids.map((id) =>
-          axios.get(`https://api.cartola.globo.com/time/id/${id}`)
-        )
+        ids.map((id) => axios.get(`/api/${id}`))
       );
 
       setTeamData(
@@ -57,7 +56,7 @@ export default function Home({ ids }: Props) {
     });
 
     setTeamData(updatedTeamData);
-  }, []);
+  }, [teamData]);
   // Inserir teamData no [] para extrair 1 vez e tirar print
 
   // const handleSortByPontosCampeonato = () => {
@@ -110,6 +109,7 @@ export default function Home({ ids }: Props) {
             <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
               Dif to lider
             </th>
+
             <th>
               {" "}
               <Link href="/desafio">Ir para Desafios bolas de ouro →</Link>
