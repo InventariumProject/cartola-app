@@ -22,8 +22,9 @@ type UpdatedTeamData = TeamData & {
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ ids }: Props) {
-  const [teamData, setTeamData] = useState<any[]>([]);
+  const [teamData, setTeamData] = useState<UpdatedTeamData[]>([]);
   const [sortOrder, setSortOrder] = useState<string>("asc");
+  const [diffToLeaderData, setDiffToLeaderData] = useState<number[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -49,29 +50,28 @@ export default function Home({ ids }: Props) {
   }, [ids]);
 
   useEffect(() => {
-    const updatedTeamData = teamData.map((team, i) => {
+    if (teamData.length > 0 && diffToLeaderData.length === 0) {
       const leaderScore = teamData[0].pontos_campeonato;
-      const diffToLeader = (team.pontos_campeonato - leaderScore).toFixed(2);
-      return { ...team, diffToLeader };
-    });
+      const updatedDiffToLeaderData = teamData.map(
+        (team) => leaderScore - team.pontos_campeonato
+      );
+      setDiffToLeaderData(updatedDiffToLeaderData);
+    }
+  }, [teamData, diffToLeaderData]);
 
-    setTeamData(updatedTeamData);
-  }, []);
-  // Inserir teamData no [] para extrair 1 vez e tirar print
-
-  // const handleSortByPontosCampeonato = () => {
-  //   if (sortOrder === "asc") {
-  //     setTeamData(
-  //       [...teamData].sort((a, b) => a.pontos_campeonato - b.pontos_campeonato)
-  //     );
-  //     setSortOrder("desc");
-  //   } else {
-  //     setTeamData(
-  //       [...teamData].sort((a, b) => b.pontos_campeonato - a.pontos_campeonato)
-  //     );
-  //     setSortOrder("asc");
-  //   }
-  // };
+  const handleSortByPontosCampeonato = () => {
+    if (sortOrder === "asc") {
+      setTeamData(
+        [...teamData].sort((a, b) => a.pontos_campeonato - b.pontos_campeonato)
+      );
+      setSortOrder("desc");
+    } else {
+      setTeamData(
+        [...teamData].sort((a, b) => b.pontos_campeonato - a.pontos_campeonato)
+      );
+      setSortOrder("asc");
+    }
+  };
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center">
@@ -87,18 +87,18 @@ export default function Home({ ids }: Props) {
             <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
               <div className="flex items-center justify-between">
                 Pontuação Geral
-                {/* <select
+                <select
                   className="ml-2 p-1 bg-gray-900 rounded border cursor-pointer required:invalid"
                   onChange={handleSortByPontosCampeonato}
                   value={sortOrder}
                 >
                   <option value="desc">Ordenar: ↑ </option>
                   <option value="asc">Ordenar: ↓ </option>
-                </select> */}
+                </select>
               </div>
             </th>
             <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
-              Rodada Atual
+              Última Rodada
             </th>
             <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
               Patrimônio
@@ -135,7 +135,7 @@ export default function Home({ ids }: Props) {
                 {Number(data.pontos_campeonato / data.rodada_atual).toFixed(2)}
               </td>
               <td className="border px-4 py-2 text-center bg-gray-500">
-                {Number(data.diffToLeader)}
+                {Number(diffToLeaderData[index]).toFixed(2)}
               </td>
             </tr>
           ))}

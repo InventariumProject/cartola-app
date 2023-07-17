@@ -7,9 +7,9 @@ export default function Match() {
       <h1 className="text-2xl font-bold mb-8 text-center	">
         Desafios Bolas de ouro
       </h1>
-      {/* <Link className="text-center ml-10 py-4" href="/">
+      <Link className="text-center ml-10 py-4" href="/">
         ← Voltar para ranking
-      </Link> */}
+      </Link>
       <Link className="text-center ml-10 py-4" href="/premiacao">
         Ver premiações →
       </Link>
