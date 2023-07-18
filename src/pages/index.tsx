@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 type Props = {
   ids: number[];
@@ -86,36 +86,41 @@ export default function Home({ ids }: Props) {
 
   return (
     <div className="flex flex-col items-center min-w-fit p-4 bg-black">
-      <div className="w-full bg-black py-8">
-        <div className="w-full container p-2 flex justify-between items-center mx-auto py-8">
+      <div className="w-full bg-black py-6">
+        <div className="w-full container p-2 flex justify-between items-center mx-auto py-6 ">
+          <Link
+            href="/premiacao"
+            className="text-white text-sm font-bold hover:text-gray-300"
+          >
+            <div className="flex-col">
+              <span>Ver Premiações</span>
+              <FaArrowLeft />
+            </div>
+          </Link>
           <h1 className="text-white text-center text-2xl font-bold">
             Liga Garoteantes
           </h1>
+
           <Link
             href="/desafio"
             className="text-white text-sm font-bold hover:text-gray-300"
           >
             <div className="flex-col">
-              <span>Bolas de ouro</span>
+              <span>Ver Desafios</span>
               <FaArrowRight />
             </div>
           </Link>
         </div>
       </div>
-      <div className="container flex items-center m-2 py-2">
-        <table id="team-scores" className="w-full shadow rounded text-white">
-          <thead>
-            <tr>
-              <th className="border px-1 py-1 text-center bg-gray-900 font-bold">
-                Pos.
-              </th>
-              <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
-                Time
-              </th>
-              <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
-                <div className="flex items-center justify-between">
-                  Pontuação Geral
-                  {/* <select
+      <div className="container flex items-center">
+        <table id="team-scores" className="w-full">
+          <thead className="border-b-2 border-gray-200">
+            <tr className="text-gray-200">
+              <th className="p-3 text-sm font-semibold tracking-wide">Pos.</th>
+              <th className="p-3 text-sm font-semibold tracking-wide">Time</th>
+              <th className="p-3 text-sm font-semibold tracking-wide">
+                Pontuação Geral
+                {/* <select
                   className="ml-1 p-1 bg-gray-900 cursor-pointer required:invalid"
                   onChange={handleSortByPontosCampeonato}
                   value={sortOrder}
@@ -123,15 +128,13 @@ export default function Home({ ids }: Props) {
                   <option value="desc">↑</option>
                   <option value="asc">↓</option>
                 </select> */}
-                </div>
               </th>
-              <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
+              <th className="p-3 text-sm  font-semibold tracking-wide">
                 Última Rodada
               </th>
-              <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
-                <div className="flex items-center justify-between">
-                  Patrim.
-                  {/* <select
+              <th className="p-3 text-sm font-semibold tracking-wide">
+                Patrim.
+                {/* <select
                   className="ml-1 p-1 bg-gray-900 rounded cursor-pointer required:invalid"
                   onChange={handleSortByPatrimonio}
                   value={sortOrder}
@@ -139,40 +142,37 @@ export default function Home({ ids }: Props) {
                   <option value="desc">↑</option>
                   <option value="asc">↓</option>
                 </select> */}
-                </div>
               </th>
-              <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
-                Média
-              </th>
-              <th className="border px-4 py-2 text-center bg-gray-900 font-bold">
+              <th className="p-3 text-sm font-semibold tracking-wide">Média</th>
+              <th className="p-3 text-sm font-semibold tracking-wide">
                 Dif to lider
               </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="divide-y divide-gray-300">
             {teamData.map((data, index) => (
-              <tr key={index}>
-                <td className="border px-4 py-2 text-center bg-gray-500">
+              <tr key={index} className="hover:bg-gray-700">
+                <td className="p-3 text-sm text-center text-gray-300">
                   {index + 1}
                 </td>
-                <td className="border px-4 py-2 text-center bg-gray-500 ">
+                <td className="p-3 text-sm text-center text-gray-300 ">
                   {data.time.nome}
                 </td>
-                <td className="border px-4 py-2 text-center bg-gray-500 ">
+                <td className="p-3 text-sm text-center text-gray-300 ">
                   {Number(data.pontos_campeonato).toFixed(2)}
                 </td>
-                <td className="border px-4 py-2 text-center bg-gray-500 ">
+                <td className="p-3 text-sm text-center text-gray-300 ">
                   {Number(data.pontos).toFixed(2)}
                 </td>
-                <td className="border px-4 py-2 text-center bg-gray-500 ">
+                <td className="p-3 text-sm text-center text-gray-300 ">
                   {data.patrimonio}
                 </td>
-                <td className="border px-4 py-2 text-center bg-gray-500">
+                <td className="p-3 text-sm text-center text-gray-300">
                   {Number(data.pontos_campeonato / data.rodada_atual).toFixed(
                     2
                   )}
                 </td>
-                <td className="border px-4 py-2 text-center bg-gray-500">
+                <td className="p-3 text-center text-sm text-gray-300">
                   {Number(diffToLeaderData[index]).toFixed(2)}
                 </td>
               </tr>
