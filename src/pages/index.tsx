@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight, FaTrophy } from "react-icons/fa";
 
 type Props = {
   ids: number[];
@@ -10,6 +10,8 @@ type Props = {
 type TeamData = {
   time: {
     nome: string;
+    nome_cartola: string;
+    url_camisa_svg: string;
   };
   pontos_campeonato: number;
   pontos: number;
@@ -24,7 +26,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ ids }: Props) {
   const [teamData, setTeamData] = useState<UpdatedTeamData[]>([]);
-  const [sortOrder, setSortOrder] = useState<string>("asc");
+  //const [sortOrder, setSortOrder] = useState<string>("asc");
   const [diffToLeaderData, setDiffToLeaderData] = useState<number[]>([]);
 
   useEffect(() => {
@@ -85,9 +87,9 @@ export default function Home({ ids }: Props) {
   // };
 
   return (
-    <div className="flex flex-col items-center min-w-fit p-4 bg-black">
-      <div className="w-full bg-black py-6">
-        <div className="w-full container p-2 flex justify-between items-center mx-auto py-6 ">
+    <div className="flex flex-col min-w-fit items-center bg-gray-950">
+      <div className="w-full bg-green-950 p-4">
+        <div className="w-full container flex justify-between items-center mx-auto py-6 ">
           <Link
             href="/premiacao"
             className="text-white text-sm font-bold hover:text-gray-300"
@@ -97,7 +99,7 @@ export default function Home({ ids }: Props) {
               <FaArrowLeft />
             </div>
           </Link>
-          <h1 className="text-white text-center text-2xl font-bold">
+          <h1 className="text-white text-center text-4xl font-bold">
             Liga Garoteantes
           </h1>
 
@@ -112,12 +114,14 @@ export default function Home({ ids }: Props) {
           </Link>
         </div>
       </div>
-      <div className="container flex items-center">
+      <div className="container flex items-center px-6">
         <table id="team-scores" className="w-full">
           <thead className="border-b-2 border-gray-200">
             <tr className="text-gray-200">
               <th className="p-3 text-sm font-semibold tracking-wide">Pos.</th>
-              <th className="p-3 text-sm font-semibold tracking-wide">Time</th>
+              <th className="p-3 text-start text-sm font-semibold tracking-wide">
+                Time
+              </th>
               <th className="p-3 text-sm font-semibold tracking-wide">
                 Pontuação Geral
                 {/* <select
@@ -129,7 +133,7 @@ export default function Home({ ids }: Props) {
                   <option value="asc">↓</option>
                 </select> */}
               </th>
-              <th className="p-3 text-sm  font-semibold tracking-wide">
+              <th className="p-3 text-sm font-semibold tracking-wide">
                 Última Rodada
               </th>
               <th className="p-3 text-sm font-semibold tracking-wide">
@@ -151,12 +155,25 @@ export default function Home({ ids }: Props) {
           </thead>
           <tbody className="divide-y divide-gray-300">
             {teamData.map((data, index) => (
-              <tr key={index} className="hover:bg-gray-700">
+              <tr key={index} className="bg-gray-900  hover:bg-gray-700">
                 <td className="p-3 text-sm text-center text-gray-300">
                   {index + 1}
                 </td>
-                <td className="p-3 text-sm text-center text-gray-300 ">
-                  {data.time.nome}
+                <td className="p-3 flex items-center space-x-2 text-center justify-start">
+                  <img
+                    src={data.time.url_camisa_svg}
+                    alt="Team Logo"
+                    className="h-8 w-8"
+                  />
+                  <div className="flex flex-col text-start px-1">
+                    <p className="text-sm text-white truncate">
+                      {data.time.nome}
+                    </p>
+                    <span className="text-xs text-gray-400">
+                      {data.time.nome_cartola}
+                    </span>
+                  </div>
+                  {index == 0 ? <FaTrophy color="yellow" /> : ""}
                 </td>
                 <td className="p-3 text-sm text-center text-gray-300 ">
                   {Number(data.pontos_campeonato).toFixed(2)}
