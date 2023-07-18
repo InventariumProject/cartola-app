@@ -173,7 +173,7 @@ export default function Home({ ids }: Props) {
                       {data.time.nome_cartola}
                     </span>
                   </div>
-                  {index == 0 ? <FaTrophy color="yellow" /> : ""}
+                  {index == 0 && <FaTrophy color="yellow" />}
                 </td>
                 <td className="p-3 text-sm text-center text-gray-300 ">
                   {Number(data.pontos_campeonato).toFixed(2)}
