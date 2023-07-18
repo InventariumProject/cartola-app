@@ -85,10 +85,10 @@ export default function Home({ ids }: Props) {
   // };
 
   return (
-    <div className="flex flex-col items-center min-w-fit m-4 p-4 dark:bg-black">
-      <div className="w-full bg-black py-8 ">
+    <div className="flex flex-col items-center min-w-fit p-4 bg-black">
+      <div className="w-full bg-black py-8">
         <div className="w-full container p-2 flex justify-between items-center mx-auto py-8">
-          <h1 className="text-white text-center text-2xl  font-bold">
+          <h1 className="text-white text-center text-2xl font-bold">
             Liga Garoteantes
           </h1>
           <Link
@@ -103,7 +103,7 @@ export default function Home({ ids }: Props) {
         </div>
       </div>
       <div className="container flex items-center m-2 py-2">
-        <table id="team-scores" className="w-full shadow rounded">
+        <table id="team-scores" className="w-full shadow rounded text-white">
           <thead>
             <tr>
               <th className="border px-1 py-1 text-center bg-gray-900 font-bold">
