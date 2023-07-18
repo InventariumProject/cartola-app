@@ -1,11 +1,20 @@
 import Link from "next/link";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export default function Awards() {
   return (
-    <div className="flex flex-col items-center min-w-fit m-2 p-2 dark:bg-black">
-      <Link className="text-center ml-10 p-4" href="/desafio">
-        ← Voltar para desafios
-      </Link>
+    <div className="flex flex-col items-center min-w-fit m-2 p-2 bg-black text-white">
+      <div className="flex justify-between space-x-24">
+        <Link className="text-center text-md p-4" href="/desafio">
+          Desafios
+          <FaArrowLeft />
+        </Link>
+        <Link className="text-center text-md p-4" href="/">
+          Ranking
+          <FaArrowRight />
+        </Link>
+      </div>
+
       <h1 className="text-2xl font-bold mb-8 text-center">
         Tabela de Valores das Premiações
       </h1>
