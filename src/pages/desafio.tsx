@@ -1,19 +1,25 @@
 import Link from "next/link";
 import Image from "next/image";
+import { FaArrowLeft } from "react-icons/fa";
 
 export default function Match() {
   return (
-    <div className="flex flex-col items-center min-w-fit m-2 p-2 dark:bg-black">
-      <h1 className="text-2xl font-bold mb-8 text-center	">
-        Desafios Bolas de ouro
-      </h1>
-      {/* <Link className="text-center ml-10 py-4" href="/">
-        ← Voltar para ranking
-      </Link> */}
-      <Link className="text-center ml-10 py-4" href="/premiacao">
-        Ver premiações →
+    <div className="flex flex-col items-center min-w-fit bg-black">
+      <div className="flex items-center space-x-6 justify-between">
+        <h1 className="text-2xl font-bold m-8 text-center text-white">
+          Desafios Bolas de ouro
+        </h1>
+      </div>
+      <Link
+        href="/"
+        className="text-white text-sm font-bold hover:text-gray-300"
+      >
+        <div className="flex items-center space-x-4">
+          <FaArrowLeft />
+          <span>Voltar</span>
+        </div>
       </Link>
-      <table className="w-fit mt-6 flex items-center">
+      <table className="w-fit mt-6 flex items-center m-2 p-2 text-white">
         <tbody>
           <tr className="">
             <td className="text-center border-b-2 rounded-l-lg p-1">
@@ -27,7 +33,7 @@ export default function Match() {
                 <span className="text-xs">UmPouco Droga UmPouco Salada</span>
               </div>
             </td>
-            <td className="text-center">7</td>
+            <td className="text-center">8</td>
             <td className="text-center">x</td>
             <td className="text-center">7</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
@@ -56,7 +62,7 @@ export default function Match() {
             </td>
             <td className="text-center p-4">7</td>
             <td className="text-center p-4">x</td>
-            <td className="text-center p-4">7</td>
+            <td className="text-center p-4">8</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
               <div className="flex items-center space-x-2">
                 <Image
@@ -83,7 +89,7 @@ export default function Match() {
             </td>
             <td className="text-center p-4">7</td>
             <td className="text-center p-4">x</td>
-            <td className="text-center p-4">7</td>
+            <td className="text-center p-4">8</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
               <div className="flex items-center space-x-2">
                 <Image
@@ -108,7 +114,7 @@ export default function Match() {
                 <span className="text-sm">RaffeikeFC</span>
               </div>
             </td>
-            <td className="text-center p-4">11</td>
+            <td className="text-center p-4">12</td>
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">3</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
@@ -135,7 +141,7 @@ export default function Match() {
                 <span className="text-xs">Hoje eu vou Garotear FC</span>
               </div>
             </td>
-            <td className="text-center p-4">7</td>
+            <td className="text-center p-4">8</td>
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">7</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
@@ -164,7 +170,7 @@ export default function Match() {
             </td>
             <td className="text-center p-4">6</td>
             <td className="text-center p-4">x</td>
-            <td className="text-center p-4">7</td>
+            <td className="text-center p-4">8</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
               <div className="flex items-center space-x-2">
                 <Image
@@ -189,7 +195,7 @@ export default function Match() {
                 <span className="text-sm">A volta do Mito</span>
               </div>
             </td>
-            <td className="text-center p-4">8</td>
+            <td className="text-center p-4">9</td>
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">3</td>
             <td className="text-center border-b-2 rounded-l-lg p-2">
