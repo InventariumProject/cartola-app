@@ -155,7 +155,7 @@ export default function Home({ ids }: Props) {
           </thead>
           <tbody className="divide-y divide-gray-300">
             {teamData.map((data, index) => (
-              <tr key={index} className="bg-gray-950  hover:bg-gray-700">
+              <tr key={index} className="bg-gray-700 hover:bg-gray-800">
                 <td className="p-3 text-sm text-center text-gray-300">
                   {index + 1}
                 </td>
