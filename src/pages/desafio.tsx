@@ -31,7 +31,7 @@ export default function Match() {
         </div>
       </div>
       <table className="w-fit mt-24 mb-72 flex items-center m-1 p-2 text-white">
-        <tbody>
+        <tbody className="divide-y-2 divide-gray-800">
           <tr className="bg-gray-700 hover:bg-gray-800">
             <td className="p-1 text-sm text-center text-gray-300">
               <div className="flex items-center space-x-2">
