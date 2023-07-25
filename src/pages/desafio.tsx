@@ -48,14 +48,14 @@ export default function Match() {
             <td className="text-center">x</td>
             <td className="text-center">7</td>
             <td className="text-center p-2">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center justify-between space-x-2">
+                <span className="text-sm">Tenha Calma Moreno</span>
                 <Image
                   src={"./images/daniel.svg"}
                   alt="escudo"
                   width={30}
                   height={30}
                 />
-                <span className="text-sm">Tenha Calma Moreno</span>
               </div>
             </td>
           </tr>
@@ -75,14 +75,14 @@ export default function Match() {
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">8</td>
             <td className="text-center p-2">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center justify-between space-x-2">
+                <span className="text-sm">Seringas F.C</span>
                 <Image
                   src={"./images/seringas.svg"}
                   alt="escudo"
                   width={30}
                   height={30}
                 />
-                <span className="text-sm">Seringas F.C</span>
               </div>
             </td>
           </tr>
@@ -102,14 +102,14 @@ export default function Match() {
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">9</td>
             <td className="text-center p-2">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center justify-between space-x-2">
+                <span className="text-sm">Os sujismundos</span>
                 <Image
                   src={"./images/sujismundo.svg"}
                   alt="escudo"
                   width={30}
                   height={30}
                 />
-                <span className="text-sm">Os sujismundos</span>
               </div>
             </td>
           </tr>
@@ -129,14 +129,14 @@ export default function Match() {
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">3</td>
             <td className="text-center p-2">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center justify-between space-x-2">
+                <span className="text-sm">Chupaku de Goianinha</span>
                 <Image
                   src={"./images/xandao.svg"}
                   alt="escudo"
                   width={30}
                   height={30}
                 />
-                <span className="text-sm">Chupaku de Goianinha</span>
               </div>
             </td>
           </tr>
@@ -156,14 +156,14 @@ export default function Match() {
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">8</td>
             <td className="text-center p-2">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center justify-between space-x-2">
+                <span className="text-sm">Tenha Calma Moreno</span>
                 <Image
                   src={"./images/daniel.svg"}
                   alt="escudo"
                   width={30}
                   height={30}
                 />
-                <span className="text-sm">Tenha Calma Moreno</span>
               </div>
             </td>
           </tr>
@@ -183,14 +183,14 @@ export default function Match() {
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">9</td>
             <td className="text-center p-2">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center justify-between space-x-2">
+                <span className="text-sm">Palestrino ®©</span>
                 <Image
                   src={"./images/palestrino.svg"}
                   alt="escudo"
                   width={30}
                   height={30}
                 />
-                <span className="text-sm">Palestrino ®©</span>
               </div>
             </td>
           </tr>
@@ -210,14 +210,14 @@ export default function Match() {
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">3</td>
             <td className="text-center p-2">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center justify-between space-x-2">
+                <span className="text-sm">Chupaku de Goianinha</span>
                 <Image
                   src={"./images/xandao.svg"}
                   alt="escudo"
                   width={30}
                   height={30}
                 />
-                <span className="text-sm">Chupaku de Goianinha</span>
               </div>
             </td>
           </tr>
