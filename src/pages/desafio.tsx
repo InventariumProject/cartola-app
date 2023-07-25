@@ -30,10 +30,10 @@ export default function Match() {
           </Link>
         </div>
       </div>
-      <table className="w-fit mt-36 mb-72 flex items-center m-1 p-2 text-white">
+      <table className="w-fit mt-24 mb-72 flex items-center m-1 p-2 text-white">
         <tbody>
           <tr className="bg-gray-700 hover:bg-gray-800">
-            <td className="p-1  text-sm text-center text-gray-300">
+            <td className="p-1 text-sm text-center text-gray-300">
               <div className="flex items-center space-x-2">
                 <Image
                   src={"./images/droga.svg"}
