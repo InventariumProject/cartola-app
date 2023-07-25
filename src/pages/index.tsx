@@ -87,7 +87,7 @@ export default function Home({ ids }: Props) {
   // };
 
   return (
-    <div className="flex flex-col min-w-fit items-center bg-gray-950">
+    <div className="flex flex-col min-w-fit items-center bg-gray-900">
       <div className="w-full bg-green-950 p-4">
         <div className="w-full container flex justify-between items-center mx-auto py-6 ">
           <Link
@@ -155,7 +155,7 @@ export default function Home({ ids }: Props) {
           </thead>
           <tbody className="divide-y divide-gray-300">
             {teamData.map((data, index) => (
-              <tr key={index} className="bg-gray-900  hover:bg-gray-700">
+              <tr key={index} className="bg-gray-950  hover:bg-gray-700">
                 <td className="p-3 text-sm text-center text-gray-300">
                   {index + 1}
                 </td>
