@@ -206,7 +206,7 @@ export default function Match() {
                 <span className="text-sm">A volta do Mito</span>
               </div>
             </td>
-            <td className="text-center p-4">12</td>
+            <td className="text-center p-4">11</td>
             <td className="text-center p-4">x</td>
             <td className="text-center p-4">4</td>
             <td className="text-center p-2">
